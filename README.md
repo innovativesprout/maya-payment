@@ -14,7 +14,7 @@
     <a href="https://github.com/innovativesprout/maya-payment/issues">Request Feature</a>
 </p>
 
-![Downloads](https://img.shields.io/github/downloads/innovativesprout/maya-payment/total) ![Contributors](https://img.shields.io/github/contributors/innovativesprout/maya-payment?color=dark-green) ![Issues](https://img.shields.io/github/issues/innovativesprout/maya-payment) ![License](https://img.shields.io/github/license/innovativesprout/maya-payment)
+![Downloads](https://img.shields.io/github/downloads/innovativesprout/maya-payment/v1.0.0/total) ![Contributors](https://img.shields.io/github/contributors/innovativesprout/maya-payment?color=dark-green) ![Issues](https://img.shields.io/github/issues/innovativesprout/maya-payment) ![License](https://img.shields.io/github/license/innovativesprout/maya-payment)
 
 ## Table Of Contents
 
