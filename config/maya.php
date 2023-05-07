@@ -21,6 +21,10 @@ return [
         "webhook" => [
             "url" => "/payments/v1/webhooks",
             "auth_type" => "private_key"
+        ],
+        "customization" => [
+            "url" => "/payments/v1/customizations",
+            "auth_type" => "private_key"
         ]
     ]
 ];

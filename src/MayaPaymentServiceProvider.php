@@ -3,6 +3,7 @@
 use Illuminate\Support\ServiceProvider;
 use Innovativesprouts\MayaPayment\Services\BillingAddress;
 use Innovativesprouts\MayaPayment\Services\Buyer;
+use Innovativesprouts\MayaPayment\Services\Customization;
 use Innovativesprouts\MayaPayment\Services\Item;
 use Innovativesprouts\MayaPayment\Services\MayaCheckout;
 use Innovativesprouts\MayaPayment\Services\MayaClient;
@@ -56,6 +57,10 @@ class MayaPaymentServiceProvider extends ServiceProvider{
 
         $this->app->bind('maya-redirect', function(){
             return new Redirect;
+        });
+
+        $this->app->bind('maya-customization', function(){
+            return new Customization;
         });
 
     }

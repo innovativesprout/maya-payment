@@ -34,6 +34,7 @@
         * [Get Webhook](#get-webhook)
         * [Update Webhook](#update-webhook)
         * [Delete Webhook](#delete-webhook)
+    * [Customizations](#customizations)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
     * [Etiquette](#etiquette)
@@ -46,14 +47,14 @@
 
 This package allows you manage your customer checkouts, webhooks, and other payments using Maya API.
 
-####Supported Features:
+#### Supported Features:
 
 - Checkout
 - Webhooks
-
-####Next Features:
-
 - Customizations
+
+#### Next Features:
+
 - Payment Transactions
 - Card Payment Vault
 - Wallet
@@ -365,6 +366,84 @@ return MayaWebhook::delete('98397531-e6cd-4c5c-ba6c-089546098989');
     "createdAt": "2023-05-07T05:28:27.000Z",
     "updatedAt": "2023-05-07T05:44:36.000Z"
 }
+```
+## Customizations
+
+Use the `MayaCustomization` by injecting the facade to your application.
+
+```php
+use Innovativesprouts\MayaPayment\Facades\MayaCustomization;
+```
+
+### Set Customization
+
+Set your `LogoUrl`, `IconUrl`, `AppleTouchIconUrl`, `CustomTitle` and `ColorScheme`. These are the required fields.
+
+#### Helper functions:
+
+- `hideReceipt()` or `showReceipt()` - Indicates if the merchant does not allow its payers to freely send transaction receipts.
+- `skipResultPage()` or `doNotSkipResultPage()` - Indicates if the merchant does not want to show the payment result page.
+  When skipped, the payment page redirects immediately to the merchant's redirect URL. 
+- `showMerchantName()` or `hideMerchantName()` - Indicates if the merchant name on the result page is displayed.
+
+```php
+return MayaCustomization::setLogoUrl("https://www.merchantsite.com/icon-store.b575c975.svg")
+        ->setIconUrl("https://www.merchantsite.com/favicon.ico")
+        ->setAppleTouchIconUrl("https://www.merchantsite.com/touch-icon-ipad-retina.png")
+        ->setCustomTitle("Merchant Store")
+        ->setColorScheme("#85c133")
+        ->showReceipt()
+        ->skipResultPage()
+        ->showMerchantName()
+        ->setRedirectTimer(10)
+        ->set();
+```
+
+#### Response:
+```json
+{
+    "logoUrl": "https://www.merchantsite.com/icon-store.b575c975.svg",
+    "iconUrl": "https://www.merchantsite.com/favicon.ico",
+    "appleTouchIconUrl": "https://www.merchantsite.com/touch-icon-ipad-retina.png",
+    "customTitle": "Merchant Store",
+    "colorScheme": "#85c133",
+    "redirectTimer": 10,
+    "hideReceiptInput": false,
+    "skipResultPage": true,
+    "showMerchantName": true
+}
+```
+
+### Get Customization
+
+```php
+return MayaCustomization::get();
+```
+
+#### Response:
+```json
+{
+    "logoUrl": "https://www.merchantsite.com/icon-store.b575c975.svg",
+    "iconUrl": "https://www.merchantsite.com/favicon.ico",
+    "appleTouchIconUrl": "https://www.merchantsite.com/touch-icon-ipad-retina.png",
+    "customTitle": "Merchant Store",
+    "colorScheme": "#85c133",
+    "redirectTimer": 10,
+    "hideReceiptInput": false,
+    "skipResultPage": true,
+    "showMerchantName": true
+}
+```
+
+### Delete Customization
+
+```php
+return MayaCustomization::delete();
+```
+
+#### Response:
+```php
+// Blank Response
 ```
 
 ## Roadmap
