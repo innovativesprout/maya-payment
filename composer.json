@@ -1,0 +1,35 @@
+{
+    "name": "innovativesprouts/maya-payment",
+    "description": "Laravel package for Maya Payments",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Innovativesprouts\\MayaPayment\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jerson",
+            "email": "jerson@innovativesprout.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "orchestra/testbench": "dev-develop"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Innovativesprouts\\MayaPayment\\MayaPaymentServiceProvider"
+            ],
+            "aliases": {
+                "MayaClient": "Innovativesprouts\\MayaPayment\\Facades\\MayaClient",
+                "MayaCheckout": "Innovativesprouts\\MayaPayment\\Facades\\MayaCheckout"
+            }
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.2"
+    }
+}
