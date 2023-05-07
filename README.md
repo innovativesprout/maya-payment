@@ -414,7 +414,7 @@ Before submitting a pull request:
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/innovativesprout/maya-payment/blob/main/LICENSE.md) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/innovativesprout/maya-payment/blob/master/LICENSE.md) for more information.
 
 
 
