@@ -14,7 +14,7 @@
     <a href="https://github.com/innovativesprout/maya-payment/issues">Request Feature</a>
 </p>
 
-![Downloads](https://img.shields.io/github/downloads/innovativesprout/maya-payment/v1.0.0/total) ![Contributors](https://img.shields.io/github/contributors/innovativesprout/maya-payment?color=dark-green) ![Issues](https://img.shields.io/github/issues/innovativesprout/maya-payment) ![License](https://img.shields.io/github/license/innovativesprout/maya-payment)
+![Downloads](https://img.shields.io/github/downloads/innovativesprout/maya-payment/v1.1.0/total) ![Contributors](https://img.shields.io/github/contributors/innovativesprout/maya-payment?color=dark-green) ![Issues](https://img.shields.io/github/issues/innovativesprout/maya-payment) ![License](https://img.shields.io/github/license/innovativesprout/maya-payment)
 
 ## Table Of Contents
 
@@ -45,7 +45,7 @@
 
 ## What It Does
 
-This package allows you manage your customer checkouts, webhooks, and other payments using Maya API.
+This package enables you to handle customer checkouts, webhooks, and other payment-related tasks utilizing the Maya API.
 
 #### Supported Features:
 
